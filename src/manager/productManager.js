@@ -1,7 +1,7 @@
 import fs from "fs";
 import { v4 as uuidv4 } from "uuid";
 
-const path = "../database/products.json"; 
+const path = "src/database/products.json"; 
 
 export default class ProductManager {
     constructor(path) {
