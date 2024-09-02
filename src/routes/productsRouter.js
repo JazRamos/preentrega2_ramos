@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import ProductManager from '../manager/productManager.js';
+import ProductManager from '../dao/filesystem/productManager.js';
 import { __dirname } from '../path.js';
 import { productValidator } from '../middlewares/productValidator.js';
 
