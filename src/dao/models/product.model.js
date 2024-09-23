@@ -1,23 +1,21 @@
 import mongoose from "mongoose";
 import mongoosePaginate from 'mongoose-paginate-v2';
 
-const productCollection = 'product';
+const productCollection = 'products';
 
 const productSchema = new mongoose.Schema({
     title: {
         type: String,
-        require: true,
-        max: 30,
-        index: true
+        required: true
+      
     },
     description: {
         type: String,
-        require: true,
-        index: true
+        required: true
     },
     price: {
         type: Number,
-        require: true
+        required: true
     },
     img: [String],
     code: {
@@ -26,24 +24,11 @@ const productSchema = new mongoose.Schema({
     },
     stock: {
         type: Number,
-        require: true
+        required: true
     },
     category: {
         type: String,
-        enum: {
-            values: [
-                'Lapiceras',
-                'Cuadernos',
-                'Lapices',
-                'Resaltadores',
-                'Temperas',
-                'Correctores',
-                'Otros'
-            ],
-            message: '{VALUE} no es una categoría válida',
-        },
-        require: true,
-        index: true,
+        required: true
     },
     status: { type: Boolean, default: true },
 });
